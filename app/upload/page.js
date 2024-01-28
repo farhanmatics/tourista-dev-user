@@ -9,7 +9,7 @@ const Upload = () => {
       <PageHeader backlink="/traveler" />
       <div className="pt-20">
         <div className="flex items-center justify-center">
-          <div className="flex flex-col border p-4 shadow-lg shadow-purple-200 rounded-md border-purple-50">
+          <div className="flex flex-col border border-purple-800 rounded-lg px-8 py-3">
             <p className="py-3 font-semibold capitalize text-tourPurple">
               Traveler Files:
             </p>
