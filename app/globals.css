@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.a{fill:none;stroke:#f70090;stroke-linecap:round;stroke-linejoin:round;}
+

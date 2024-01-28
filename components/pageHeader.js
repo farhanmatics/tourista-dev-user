@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const PageHeader = ({backlink}) => {
   return (
-    <div className="fixed top-0 w-full">
+    <div className="fixed w-full">
       <div className="flex items-center justify-between bg-purple-950 py-4">
         <Link
         href={backlink}
