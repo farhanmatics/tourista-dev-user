@@ -12,7 +12,7 @@ const HomeFooter = () => {
         <div className="max-w-sm rounded-3xl bg-gray-100 shadow-lg">
           <a href="#">
             <img
-              className="h-80 w-full rounded-t-xl"
+              className="h-60 w-full rounded-t-xl"
               src="https://images.unsplash.com/photo-1606036858743-c106b6ffbff6?q=80&w=2476&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
             />
@@ -20,11 +20,11 @@ const HomeFooter = () => {
           <div className="p-3">
             <div className="flex justify-between">
               <a href="#">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-purple-900 pl-3">
+                <h5 className="mb-2 text-xl font-bold tracking-tight text-purple-900 pl-3">
                   DUBAI <span className="text-sm text-gray-600">Asia</span>
                 </h5>
               </a>
-              <a href="" className="text-purple-700 font-bold text-2xl">
+              <a href="" className="text-purple-700 font-bold text-lg">
                 15,500 BDT
               </a>
             </div>
@@ -40,7 +40,7 @@ const HomeFooter = () => {
         <div className="max-w-sm rounded-3xl bg-gray-100 shadow-lg">
           <a href="#">
             <img
-              className="h-80 w-full rounded-t-xl"
+              className="h-60 w-full rounded-t-xl"
               src="https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
             />
@@ -48,11 +48,11 @@ const HomeFooter = () => {
           <div className="p-3">
             <div className="flex justify-between">
               <a href="#">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-purple-900 pl-3 uppercase">
+                <h5 className="mb-2 text-xl font-bold tracking-tight text-purple-900 pl-3 uppercase">
                   thailand <span className="text-sm text-gray-600">Asia</span>
                 </h5>
               </a>
-              <a href="#" className="text-purple-700 font-bold text-2xl">
+              <a href="#" className="text-purple-700 font-bold text-lg">
                 4,560 BDT
               </a>
             </div>
@@ -68,7 +68,7 @@ const HomeFooter = () => {
         <div className="max-w-sm rounded-3xl bg-gray-100 shadow-lg">
           <a href="#">
             <img
-              className="h-80 w-full rounded-t-xl"
+              className="h-60 w-full rounded-t-xl"
               src="https://images.unsplash.com/photo-1577931683033-1059552104e0?q=80&w=2673&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
             />
@@ -76,11 +76,11 @@ const HomeFooter = () => {
           <div className="p-3">
             <div className="flex justify-between">
               <a href="#">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-purple-900 pl-3 uppercase">
+                <h5 className="mb-2 text-xl font-bold tracking-tight text-purple-900 pl-3 uppercase">
                   malaysia <span className="text-sm text-gray-600">Asia</span>
                 </h5>
               </a>
-              <a href="#" className="text-purple-700 font-bold text-2xl">
+              <a href="#" className="text-purple-700 font-bold text-lg">
                 3,400 BDT
               </a>
             </div>
@@ -96,7 +96,7 @@ const HomeFooter = () => {
         <div className="max-w-sm rounded-3xl bg-gray-100 shadow-lg">
           <a href="#">
             <img
-              className="h-80 w-full rounded-t-xl"
+              className="h-60 w-full rounded-t-xl"
               src="https://images.unsplash.com/photo-1565967511849-76a60a516170?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
             />
@@ -104,11 +104,11 @@ const HomeFooter = () => {
           <div className="p-3">
             <div className="flex justify-between">
               <a href="#">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-purple-900 pl-3 uppercase">
+                <h5 className="mb-2 text-xl font-bold tracking-tight text-purple-900 pl-3 uppercase">
                   singapore <span className="text-sm text-gray-600">Asia</span>
                 </h5>
               </a>
-              <a href="#" className="text-purple-700 font-bold text-2xl">
+              <a href="#" className="text-purple-700 font-bold text-lg">
                 3,550 BDT
               </a>
             </div>
@@ -126,7 +126,7 @@ const HomeFooter = () => {
         <div className="grid grid-cols-1 gap-1 md:grid-cols-2 md:gap-2 items-center justify-center py-10">
           <div className="flex flex-col items-center justify-end">
             <img
-              className="w-80 h-80 object-cover rounded-lg shadow-xl"
+              className="w-80 h-60 object-cover rounded-lg shadow-xl"
               id="myImage"
               src="https://tourista.co/img/girl_laptop.jpg"
             />
