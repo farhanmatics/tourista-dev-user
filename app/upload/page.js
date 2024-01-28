@@ -8,14 +8,14 @@ const Upload = () => {
     <>
       <PageHeader backlink='/traveler'/>
       <div className='pt-20'>
-        <div class="flex items-center justify-center">
+        <div className="flex items-center justify-center">
           <div
-              class="flex flex-col border p-12 shadow-lg shadow-purple-200 rounded-md border-purple-50">
-              <p class="py-3 font-semibold capitalize text-tourPurple">Traveler Files:</p>
+              className="flex flex-col border p-12 shadow-lg shadow-purple-200 rounded-md border-purple-50">
+              <p className="py-3 font-semibold capitalize text-tourPurple">Traveler Files:</p>
               <input type="file" name="" id="" className="form-input px-4 py-2 border border-purple-200 rounded-md"/>
               <Link 
               href='#'
-              class="rounded-md bg-purple-950 px-4 py-2 mt-2 text-white text-center font-semibold text-sm">Upload</Link>
+              className="rounded-md bg-purple-950 px-4 py-2 mt-2 text-white text-center font-semibold text-sm">Upload</Link>
           </div>
       </div>
       </div>
