@@ -5,7 +5,8 @@ const onest = Onest({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Tourista | User",
-  description: "Tourista",
+  description: "Tourista user platform",
+  "shortcut icon": "https://tourista.co/img/favicon.ico",
 };
 
 export default function RootLayout({ children }) {
