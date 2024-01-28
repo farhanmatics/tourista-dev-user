@@ -2,9 +2,9 @@ import React from 'react'
 
 const HomeHeader = () => {
   return (
-    <div className="relative h-60">
+    <div className="relative">
         <img
-            className="h-60 w-full object-fill shadow-xl"
+            className="h-48 w-full object-fill shadow-xl"
             src="https://images.unsplash.com/photo-1523496922380-91d5afba98a3?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D z-0"/>
 
         <div
@@ -14,12 +14,12 @@ const HomeHeader = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
-                    viewbox="0 0 24 24"
+                    viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="lucide lucide-align-left">
                     <line x1="21" x2="3" y1="6" y2="6"/>
                     <line x1="15" x2="3" y1="12" y2="12"/>

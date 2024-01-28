@@ -1,6 +1,7 @@
 import HomeFooter from "@/components/homeFooter";
 import HomeHeader from "@/components/homeHeader";
 import Image from "next/image";
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -34,10 +35,10 @@ export default function Home() {
     </div>
     <div className="flex items-center justify-center px-2 py-4">
         <span className="relative inline-flex">
-            <a
-                href="./traveler.html"
+            <Link
+                href="/details"
                 className="inline-flex cursor-pointer items-center rounded-md bg-lightPurple px-32 py-2 text-sm font-semibold leading-6 text-white shadow"
-                disabled="">Start Your Adventure</a>
+                disabled="">Start Your Adventure</Link>
             <span className="absolute right-0 top-0 -mr-1 -mt-1 flex h-3 w-3">
                 <span
                     className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blueSky opacity-75"></span>
