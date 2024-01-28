@@ -12,6 +12,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="shortcut icon" href="https://tourista.co/img/favicon.ico" />
+      </head>
       <body className={onest.className}>{children}</body>
     </html>
   );
