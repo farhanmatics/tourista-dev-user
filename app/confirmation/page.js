@@ -1,7 +1,3 @@
-import PageBottom from "@/components/pageBottom";
-import PageHeader from "@/components/pageHeader";
-import React from "react";
-import Link from "next/link";
 
 const Confirmation = () => {
   return (

@@ -1,6 +1,5 @@
-import PageBottom from "@/components/pageBottom";
-import PageHeader from "@/components/pageHeader";
-import React from "react";
+import PageBottom from "../../components/pageBottom";
+import PageHeader from "../../components/pageHeader";
 
 const Details = () => {
   return (

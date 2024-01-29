@@ -1,9 +1,8 @@
 "use client";
 
-import PageBottom from "@/components/pageBottom";
-import PageHeader from "@/components/pageHeader";
-import React, { useState } from "react";
-import Link from "next/link";
+import { useState } from "react";
+import PageBottom from "../../components/pageBottom";
+import PageHeader from "../../components/pageHeader";
 
 const Payment = () => {
   const [chkstate, setChkstate] = useState(true);

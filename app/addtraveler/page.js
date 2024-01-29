@@ -1,8 +1,8 @@
 "use client";
 
-import PageBottom from "@/components/pageBottom";
-import PageHeader from "@/components/pageHeader";
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
+import PageBottom from "../../components/pageBottom";
+import PageHeader from "../../components/pageHeader";
 
 const Add = () => {
   const [mrzDetails, setMrzDetails] = useState({

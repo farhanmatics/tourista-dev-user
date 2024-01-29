@@ -1,7 +1,6 @@
-import HomeFooter from "@/components/homeFooter";
-import HomeHeader from "@/components/homeHeader";
-import Image from "next/image";
 import Link from "next/link";
+import HomeFooter from "../components/HomeFooter";
+import HomeHeader from "../components/HomeHeader";
 
 export default function Home() {
   return (
