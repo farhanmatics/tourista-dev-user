@@ -1,9 +1,120 @@
+"use client";
+
 import PageBottom from "@/components/pageBottom";
 import PageHeader from "@/components/pageHeader";
-import React from "react";
-import Link from "next/link";
+import React, { useState, useEffect } from "react";
 
 const Add = () => {
+  const [mrzDetails, setMrzDetails] = useState({
+    country: "",
+    names: "",
+    surname: "",
+    type: "",
+    date_of_birth: "",
+    expiration_date: "",
+    sex: "",
+    number: "",
+  });
+  const [imagePreview, setImagePreview] = useState(null);
+
+  //Format Date required only when using passportEye API
+  const formatDate = (inputDate) => {
+    const day = inputDate.slice(0, 2);
+    const month = inputDate.slice(2, 4);
+    const year = `20${inputDate.slice(4, 6)}`;
+
+    return `${year}-${month}-${day}`;
+  };
+
+  //Read passport using passportEye library
+  const handleImageCapture = async (event) => {
+    const fileInput = event.target;
+    const file = fileInput.files[0];
+
+    if (file) {
+      const formData = new FormData();
+      formData.append("image", file);
+
+      try {
+        const response = await fetch("http://192.168.1.104:5000/process_mrz", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          const mrzData = await response.json();
+
+          setMrzDetails(mrzData);
+          setMrzDetails({
+            ...mrzData,
+            expiration_date: formatDate(mrzData?.expiration_date),
+          });
+          console.log({ mrzData });
+          // Display the image preview
+          const reader = new FileReader();
+          reader.onloadend = () => {
+            setImagePreview(reader.result);
+          };
+          reader.readAsDataURL(file);
+          console.log("Image sent successfully");
+        } else {
+          console.error("Failed to send image to the API");
+        }
+      } catch (error) {
+        console.error("Error sending image to the API:", error);
+      }
+    }
+  };
+
+  //Read passport using mindee api
+  const handleMindeeImageCapture = async (event) => {
+    const fileInput = event.target;
+    const file = fileInput.files[0];
+
+    if (file) {
+      const formData = new FormData();
+      formData.append("image", file);
+
+      try {
+        const response = await fetch("http://192.168.1.104:5000/mindee", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          const mrzData = await response.json();
+          console.log({ mrzData });
+          setMrzDetails(mrzData);
+          // Display the image preview
+          const reader = new FileReader();
+          reader.onloadend = () => {
+            setImagePreview(reader.result);
+          };
+          reader.readAsDataURL(file);
+          console.log("Image processed successfully");
+        } else {
+          console.error("Failed to send image to the API");
+        }
+      } catch (error) {
+        console.error("Error sending image to the API:", error);
+      }
+    }
+  };
+
+  const handleNumberChange = (event) => {
+    setMrzDetails({ ...mrzDetails, number: event.target.value });
+  };
+  const handleNameChange = (event) => {
+    setMrzDetails({ ...mrzDetails, names: event.target.value });
+  };
+  const handleSurnameChange = (event) => {
+    setMrzDetails({ ...mrzDetails, surname: event.target.value });
+  };
+  const handleValidityChange = (event) => {
+    console.log(event.target.value);
+    setMrzDetails({ ...mrzDetails, expiration_date: event.target.value });
+  };
+
   return (
     <>
       <PageHeader backlink="/traveler" />
@@ -21,7 +132,9 @@ const Add = () => {
               <input
                 type="text"
                 name="FirstName"
-                id=""
+                id="firstname"
+                value={mrzDetails?.names}
+                onChange={handleNameChange}
                 className="form-input px-2 border-2 border-tourPurple w-full rounded-md"
               />
             </div>
@@ -33,7 +146,9 @@ const Add = () => {
               <input
                 type="text"
                 name="SurName"
-                id=""
+                id="surname"
+                value={mrzDetails?.surname}
+                onChange={handleSurnameChange}
                 className="form-input px-2 border-2 border-lightPurple w-full rounded-md"
               />
             </div>
@@ -44,7 +159,9 @@ const Add = () => {
               <input
                 type="text"
                 name="Passport"
-                id=""
+                id="number"
+                value={mrzDetails?.number}
+                onChange={handleNumberChange}
                 className="form-input px-2 border-2 border-lightPurple w-full rounded-md"
               />
             </div>
@@ -55,19 +172,59 @@ const Add = () => {
               <input
                 type="date"
                 name="Passport"
-                id=""
+                id="validitydate"
+                value={mrzDetails?.expiration_date}
+                onChange={handleValidityChange}
                 className="form-input px-2 border-2 border-lightPurple w-full rounded-md"
               />
             </div>
           </div>
-          <div className="px-4 pt-4">
-            <Link
-              href="#"
+          {/* This button will scan using passporteye api*/}
+          {/* <div className="px-4 pt-4">
+            <label
+              htmlFor="icon-button-file"
               className="bg-tourPurple text-white px-4 py-3 rounded-md uppercase font-semibold text-sm"
             >
               use Simple Passport Scan
-            </Link>
+              <input
+                accept="image/*"
+                id="icon-button-file"
+                type="file"
+                capture="environment"
+                onChange={handleImageCapture}
+                className="hidden"
+              />
+            </label>
+          </div> */}
+          {/*This button will scan using mindee api */}
+          <div className="px-4 pt-4 my-4">
+            <label
+              htmlFor="icon-button-file2"
+              className="bg-tourPurple text-white px-4 py-3 rounded-md uppercase font-semibold text-sm"
+            >
+              use Simple Passport Scan
+              <input
+                accept="image/*"
+                id="icon-button-file2"
+                type="file"
+                capture="environment"
+                onChange={handleMindeeImageCapture}
+                className="hidden"
+              />
+            </label>
           </div>
+
+          {imagePreview && (
+            <div className="my-4 pb-6">
+              <p className="text-lightPurple">Image Preview:</p>
+              <img
+                src={imagePreview}
+                alt="Image Preview"
+                className="mt-2 border-2 border-lightPurple rounded-md"
+                style={{ maxWidth: "100%" }}
+              />
+            </div>
+          )}
         </div>
       </div>
       <PageBottom title="Add Traveler" linkurl="/traveler" />
