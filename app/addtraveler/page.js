@@ -36,10 +36,13 @@ const Add = () => {
       formData.append("image", file);
 
       try {
-        const response = await fetch("http://192.168.1.104:5000/process_mrz", {
-          method: "POST",
-          body: formData,
-        });
+        const response = await fetch(
+          `${process.env.BASE_API_URL}/process_mrz`,
+          {
+            method: "POST",
+            body: formData,
+          }
+        );
 
         if (response.ok) {
           const mrzData = await response.json();
@@ -76,7 +79,7 @@ const Add = () => {
       formData.append("image", file);
 
       try {
-        const response = await fetch("http://192.168.1.104:5000/mindee", {
+        const response = await fetch(`${process.env.BASE_API_URL}/mindee`, {
           method: "POST",
           body: formData,
         });
