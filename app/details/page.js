@@ -1,7 +1,25 @@
+"use client";
+
 import PageBottom from "../../components/pageBottom";
 import PageHeader from "../../components/pageHeader";
+import { useAppContext } from "../../contexts/AppContext";
 
 const Details = () => {
+  const { setTravelerInfo } = useAppContext();
+
+  const handleDateChange = (event) => {
+    const selectedDate = event.target.value;
+    setTravelerInfo((prevInfo) => ({ ...prevInfo, date: selectedDate }));
+  };
+
+  const handleVisaTypeChange = (event) => {
+    const selectedVisaType = event.target.value;
+    setTravelerInfo((prevInfo) => ({
+      ...prevInfo,
+      visaType: selectedVisaType,
+    }));
+  };
+
   return (
     <>
       <PageHeader backlink="/" />
@@ -21,6 +39,7 @@ const Details = () => {
                 type="date"
                 name=""
                 id=""
+                onChange={handleDateChange}
                 className="form-input text-tourPurple border-tourPurple rounded border-2 px-4 py-3 text-sm w-auto"
               />
             </div>
@@ -30,15 +49,16 @@ const Details = () => {
                 name=""
                 id=""
                 className="form-select text-tourPurple border-tourPurple rounded border-2 px-4 py-3 text-sm"
+                onChange={handleVisaTypeChange}
               >
-                <option value="Tourist">Tourist</option>
-                <option value="Medical">Medical</option>
+                <option value="6">Tourist</option>
+                <option value="11">Medical</option>
               </select>
             </div>
           </div>
         </div>
       </div>
-      <PageBottom title="Continue" linkurl="/traveler" />
+      <PageBottom title="Continue" linkurl={`/traveler`} />
     </>
   );
 };

@@ -1,5 +1,12 @@
+"use client";
+
+import { useSearchParams } from "next/navigation";
 
 const Confirmation = () => {
+  const searchParams = useSearchParams();
+  const tracking_no = searchParams.get("tracking_no");
+  console.log(tracking_no);
+
   return (
     <>
       <div className="bg-tourPurple flex flex-col h-screen items-center justify-center">
@@ -22,7 +29,10 @@ const Confirmation = () => {
           Your booking has been confirmed
         </p>
         <p className="text-white text-xl px-2 py-2">
-          Booking ID: <span className="font-bold">IKL4P0KN55</span>
+          Booking ID:{" "}
+          <span className="font-bold">
+            {tracking_no ? tracking_no : "PMfozUnxi"}
+          </span>
         </p>
         <div className="flex items-center justify-between">
           <a

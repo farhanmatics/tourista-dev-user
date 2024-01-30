@@ -3,16 +3,18 @@
 import { useState } from "react";
 import PageBottom from "../../components/pageBottom";
 import PageHeader from "../../components/pageHeader";
+import { useSearchParams } from "next/navigation";
+import { useAppContext } from "../../contexts/AppContext";
+import { useRouter } from "next/navigation";
 
 const Add = () => {
+  const { travelerInfo, setTravelerInfo } = useAppContext();
+  const router = useRouter();
   const [mrzDetails, setMrzDetails] = useState({
-    country: "",
     names: "",
     surname: "",
-    type: "",
     date_of_birth: "",
     expiration_date: "",
-    sex: "",
     number: "",
   });
   const [imagePreview, setImagePreview] = useState(null);
@@ -119,6 +121,15 @@ const Add = () => {
   const handleValidityChange = (event) => {
     console.log(event.target.value);
     setMrzDetails({ ...mrzDetails, expiration_date: event.target.value });
+  };
+
+  const handleAddTraveler = () => {
+    // Add the current traveler's details to the context state
+    setTravelerInfo((prevInfo) => ({
+      ...prevInfo,
+      travelers: [...prevInfo.travelers, mrzDetails],
+    }));
+    router.push("/traveler");
   };
 
   return (
@@ -233,7 +244,17 @@ const Add = () => {
           )}
         </div>
       </div>
-      <PageBottom title="Add Traveler" linkurl="/traveler" />
+      {/* <PageBottom title="Add Traveler" linkurl={`/traveler`} /> */}
+      <div className="">
+        <div className="mt-4 bottom-0 justify-center items-center flex">
+          <button
+            onClick={handleAddTraveler}
+            className="bg-tourPurple text-white px-4 py-3 rounded-md uppercase font-semibold text-sm"
+          >
+            Add Traveler
+          </button>
+        </div>
+      </div>
     </>
   );
 };

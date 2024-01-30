@@ -9,7 +9,7 @@ export const config = {
   matcher: [
     "/addtraveler/((?!.+\\.[\\w]+$|_next).*)",
     "/addtraveler",
-    "/",
+    "/details",
     "/(api|trpc)(.*)",
   ],
 };
