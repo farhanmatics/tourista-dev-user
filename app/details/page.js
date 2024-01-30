@@ -40,7 +40,7 @@ const Details = () => {
                 name=""
                 id=""
                 onChange={handleDateChange}
-                className="form-input text-tourPurple border-tourPurple rounded border-2 px-4 py-3 text-sm w-auto"
+                className="form-input text-tourPurple border-tourPurple rounded border-2 px-4 py-2 text-sm w-auto"
               />
             </div>
             <div className="flex flex-col px-2 mb-4">
@@ -48,7 +48,7 @@ const Details = () => {
               <select
                 name=""
                 id=""
-                className="form-select text-tourPurple border-tourPurple rounded border-2 px-4 py-3 text-sm"
+                className="form-select text-tourPurple border-tourPurple rounded border-2 px-4 py-2 text-sm"
                 onChange={handleVisaTypeChange}
               >
                 <option value="6">Tourist</option>

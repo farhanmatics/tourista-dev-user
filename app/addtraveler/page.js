@@ -152,7 +152,7 @@ const Add = () => {
                 id="firstname"
                 value={mrzDetails?.names}
                 onChange={handleNameChange}
-                className="form-input px-2 border-2 border-tourPurple w-full rounded-md"
+                className="form-input px-2 py-2 border-2 border-tourPurple w-full rounded-md"
               />
             </div>
             <div className="mt-2">
@@ -166,7 +166,7 @@ const Add = () => {
                 id="surname"
                 value={mrzDetails?.surname}
                 onChange={handleSurnameChange}
-                className="form-input px-2 border-2 border-lightPurple w-full rounded-md"
+                className="form-input px-2 py-2 border-2 border-lightPurple w-full rounded-md"
               />
             </div>
             <div className="mt-2">
@@ -179,7 +179,7 @@ const Add = () => {
                 id="number"
                 value={mrzDetails?.number}
                 onChange={handleNumberChange}
-                className="form-input px-2 border-2 border-lightPurple w-full rounded-md"
+                className="form-input px-2 py-2 border-2 border-lightPurple w-full rounded-md"
               />
             </div>
             <div className="mt-2">
@@ -192,7 +192,7 @@ const Add = () => {
                 id="validitydate"
                 value={mrzDetails?.expiration_date}
                 onChange={handleValidityChange}
-                className="form-input px-2 border-2 border-lightPurple w-full rounded-md"
+                className="form-input px-2 py-2 border-2 border-lightPurple w-full rounded-md"
               />
             </div>
           </div>
@@ -245,11 +245,11 @@ const Add = () => {
         </div>
       </div>
       {/* <PageBottom title="Add Traveler" linkurl={`/traveler`} /> */}
-      <div className="">
-        <div className="mt-4 bottom-0 justify-center items-center flex">
+      <div className="fixed bottom-0 left-0 w-full border bg-gray-200 p-4">
+        <div className="flex items-center justify-end">
           <button
             onClick={handleAddTraveler}
-            className="bg-tourPurple text-white px-4 py-3 rounded-md uppercase font-semibold text-sm"
+            className="inline-flex cursor-pointer items-center rounded-md bg-purple-950 px-12 py-2 text-sm font-semibold leading-6 text-white shadow"
           >
             Add Traveler
           </button>
