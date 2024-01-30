@@ -4,7 +4,7 @@ import "./globals.css";
 
 import { AppProvider } from "../contexts/AppContext";
 
-const onest = Onest({ subsets: ["latin"] });
+const onest = Onest({ subsets: ["latin"], display: 'swap', adjustFontFallback: false});
 
 export const metadata = {
   title: "Tourista | User",
