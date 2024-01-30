@@ -8,7 +8,7 @@ const handleConfirm = async (travelerInfo) => {
     const myHeaders = new Headers();
     myHeaders.append(
       "API-ACCESS-TOKEN",
-      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDkxOTM4MzMsImVtYWlsIjoicGFydG5lckBnbWFpbC5jb20iLCJyb2xlIjoicGFydG5lciIsInVzZXJJZCI6MywiaWF0IjoxNzA2NjAxODMzfQ.RqwGmEPYxBX_wj4KOZ_r7KRTWNtvf1ns3F2U-axA8cc"
+      `Bearer ${process.env.NEXT_JWT_TOKEN}`
     );
     myHeaders.append("Content-Type", "application/json");
 
