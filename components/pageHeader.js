@@ -33,10 +33,6 @@ const PageHeader = ({ backlink }) => {
               {/* Mount the UserButton component */}
               <UserButton afterSignOutUrl="/" />
             </SignedIn>
-            <SignedOut afterSignOutUrl="/">
-              {/* Signed out users get sign in button */}
-              <SignInButton />
-            </SignedOut>
           </div>
         </div>
       </div>

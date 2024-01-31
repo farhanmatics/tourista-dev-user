@@ -1,10 +1,5 @@
-'use client';
-import {
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  UserButton
-} from "@clerk/nextjs";
+"use client";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 const HomeHeader = () => {
   return (
@@ -34,21 +29,17 @@ const HomeHeader = () => {
           </svg>
         </div>
         <div className="flex flex-row">
-        <img
-          src="https://tourista.co/img/tl-03.png"
-          alt="tourista"
-          className="w-32 pr-4"
-        />
-        <div>
-          <SignedIn>
-            {/* Mount the UserButton component */}
-            <UserButton />
-          </SignedIn>
-          <SignedOut>
-            {/* Signed out users get sign in button */}
-            <SignInButton/>
-          </SignedOut>
-        </div>
+          <img
+            src="https://tourista.co/img/tl-03.png"
+            alt="tourista"
+            className="w-32 pr-4"
+          />
+          <div>
+            <SignedIn>
+              {/* Mount the UserButton component */}
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
+          </div>
         </div>
       </div>
     </div>
