@@ -1,11 +1,10 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import PageBottom from "../../components/pageBottom";
 import PageHeader from "../../components/pageHeader";
 import { useAppContext } from "../../contexts/AppContext";
 import handleConfirm from "./server-page";
-import { useRouter } from "next/navigation";
 
 const Payment = () => {
   const router = useRouter();
@@ -481,6 +480,7 @@ const Payment = () => {
           <button
             onClick={onConfirm}
             className="inline-flex cursor-pointer items-center rounded-md bg-purple-950 px-12 py-2 text-sm font-semibold leading-6 text-white shadow"
+            disabled={showLoader}
           >
             Confirm & Proceed
           </button>
