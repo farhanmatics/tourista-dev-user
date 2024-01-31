@@ -42,7 +42,7 @@ const Confirmation = () => {
             Home
           </a>
           <a
-            href="/"
+            href={`tracking/${tracking_no ? tracking_no : "PMfozUnxi"}`}
             className="text-white text-lg px-2 py-2 underline font-semibold"
           >
             Track Status
