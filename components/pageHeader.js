@@ -5,8 +5,8 @@ import Link from "next/link";
 const PageHeader = ({ backlink }) => {
   return (
     <div className="fixed w-full">
-      <div className="flex items-center justify-between bg-purple-950 py-4">
-        <Link href={backlink} className="pl-4 text-white">
+      <div className="flex items-center justify-between bg-white py-4">
+        <Link href={backlink} className="pl-4 text-black">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -24,7 +24,7 @@ const PageHeader = ({ backlink }) => {
         </Link>
         <div className="flex flex-row items-center gap-2 mr-2">
           <img
-            src="https://tourista.co/img/tl-03.png"
+            src="https://tourista.co/img/tourista_logo_dark.png"
             alt="tourista"
             className="w-32 h-7 pr-4"
           />
