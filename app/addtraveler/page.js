@@ -1,11 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import PageBottom from "../../components/pageBottom";
-import PageHeader from "../../components/pageHeader";
-import { useSearchParams } from "next/navigation";
-import { useAppContext } from "../../contexts/AppContext";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import LoaderComponent from "../../components/LoaderComponent";
+import PageHeader from "../../components/pageHeader";
+import { useAppContext } from "../../contexts/AppContext";
 
 const Add = () => {
   const { travelerInfo, setTravelerInfo } = useAppContext();
@@ -18,6 +17,7 @@ const Add = () => {
     number: "",
   });
   const [imagePreview, setImagePreview] = useState(null);
+  const [loader, setLoader] = useState(false);
 
   //Format Date required only when using passportEye API
   const formatDate = (inputDate) => {
@@ -73,6 +73,7 @@ const Add = () => {
 
   //Read passport using mindee api
   const handleMindeeImageCapture = async (event) => {
+    setLoader(true);
     const fileInput = event.target;
     const file = fileInput.files[0];
 
@@ -105,6 +106,8 @@ const Add = () => {
         }
       } catch (error) {
         console.error("Error sending image to the API:", error);
+      } finally {
+        setLoader(false);
       }
     }
   };
@@ -125,10 +128,12 @@ const Add = () => {
 
   const handleAddTraveler = () => {
     // Add the current traveler's details to the context state
-    setTravelerInfo((prevInfo) => ({
-      ...prevInfo,
-      travelers: [...prevInfo.travelers, mrzDetails],
-    }));
+    if(mrzDetails && mrzDetails.names) {
+      setTravelerInfo((prevInfo) => ({
+        ...prevInfo,
+        travelers: [...prevInfo.travelers, mrzDetails],
+      }));
+    }
     router.push("/traveler");
   };
 
@@ -214,6 +219,10 @@ const Add = () => {
             </label>
           </div> */}
           {/*This button will scan using mindee api */}
+          {/* Loader */}
+          {
+            loader && <LoaderComponent />
+          }
           <div className="px-4 pt-4 my-4">
             <label
               htmlFor="icon-button-file2"
@@ -227,6 +236,7 @@ const Add = () => {
                 capture="environment"
                 onChange={handleMindeeImageCapture}
                 className="hidden"
+                disabled={loader}
               />
             </label>
           </div>
@@ -249,7 +259,8 @@ const Add = () => {
         <div className="flex items-center justify-end">
           <button
             onClick={handleAddTraveler}
-            className="inline-flex cursor-pointer items-center rounded-md bg-purple-950 px-12 py-2 text-sm font-semibold leading-6 text-white shadow"
+            disabled={loader}
+            className={`inline-flex cursor-pointer items-center rounded-md bg-purple-950 ${loader? "opacity-30": "opacity-100"} px-12 py-2 text-sm font-semibold leading-6 text-white shadow`}
           >
             Add Traveler
           </button>

@@ -1,5 +1,5 @@
 "use client";
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { SignedIn, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 
 const PageHeader = ({ backlink }) => {
@@ -22,11 +22,11 @@ const PageHeader = ({ backlink }) => {
             <path d="m15 18-6-6 6-6" />
           </svg>
         </Link>
-        <div className="flex flex-row gap-2 mr-2">
+        <div className="flex flex-row items-center gap-2 mr-2">
           <img
             src="https://tourista.co/img/tl-03.png"
             alt="tourista"
-            className="w-32 pr-4"
+            className="w-32 h-7 pr-4"
           />
           <div>
             <SignedIn>

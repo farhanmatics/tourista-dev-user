@@ -1,5 +1,5 @@
 "use client";
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { SignedIn, UserButton } from "@clerk/nextjs";
 
 const HomeHeader = () => {
   return (
@@ -28,11 +28,11 @@ const HomeHeader = () => {
             <line x1="17" x2="3" y1="18" y2="18" />
           </svg>
         </div>
-        <div className="flex flex-row">
+        <div className="flex flex-row items-center">
           <img
             src="https://tourista.co/img/tl-03.png"
             alt="tourista"
-            className="w-32 pr-4"
+            className="w-32 h-7 pr-4"
           />
           <div>
             <SignedIn>
