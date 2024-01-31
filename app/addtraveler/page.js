@@ -142,7 +142,7 @@ const Add = () => {
       <PageHeader backlink="/traveler" />
       <div className="pt-20 px-4">
         <div className="flex flex-col items-center justify-center">
-          <div className="flex flex-col border p-4 rounded-md border-purple-800">
+          <div className="flex flex-col border p-4 bg-gray-200 rounded-lg">
             <p className="py-1 font-semibold capitalize text-tourPurple">
               Add a New Traveler
             </p>

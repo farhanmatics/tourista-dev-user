@@ -13,7 +13,7 @@ const Traveler = () => {
       <PageHeader backlink="/details" />
       <div className="pt-20 px-2 mx-2">
         <div className="flex items-center justify-center">
-          <div className="flex flex-col border border-purple-800 rounded-lg px-10 py-3">
+          <div className="flex flex-col bg-gray-200 rounded-lg px-10 py-3">
             <p className="py-3 font-semibold capitalize text-tourPurple">
               Traveler Info:{" "}
               {travelerInfo.travelers.length > 0 ? (

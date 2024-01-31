@@ -302,7 +302,7 @@ const Payment = () => {
       <PageHeader backlink="/upload" />
       <div className="pt-24 px-2">
         <div className="flex items-center justify-center">
-          <div className="flex flex-col border border-purple-800 rounded-lg px-8 py-3">
+          <div className="flex flex-col border bg-gray-200 rounded-lg px-8 py-3">
             <p className="py-1 font-semibold capitalize text-tourPurple">
               Choose delivery method
             </p>
@@ -385,7 +385,7 @@ const Payment = () => {
                 </div>
               </div>
             </div>
-            <div className="max-w-sm rounded-xl border bg-white border-purple-400 mt-2">
+            <div className="max-w-sm rounded-xl border bg-white border-purple-400 mt-4">
               <div className=" bg-yellow-300 rounded-t-xl py-1 px-2">
                 <span className="font-semibold text-sm">Payment Options</span>
               </div>
