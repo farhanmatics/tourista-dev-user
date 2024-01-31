@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+.a {
+  fill: none;
+  stroke: #f70090;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 
-.a{fill:none;stroke:#f70090;stroke-linecap:round;stroke-linejoin:round;}
+.cl-formButtonPrimary {
+  font-size: 14px;
+  text-transform: none;
+  background-color: #611bbd;
+}
 
+.cl-formButtonPrimary:hover,
+.cl-formButtonPrimary:focus,
+.cl-formButtonPrimary:active {
+  background-color: #49247a;
+}

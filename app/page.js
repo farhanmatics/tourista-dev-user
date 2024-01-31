@@ -1,7 +1,6 @@
-import HomeFooter from "@/components/homeFooter";
-import HomeHeader from "@/components/homeHeader";
-import Image from "next/image";
 import Link from "next/link";
+import HomeFooter from "../components/HomeFooter";
+import HomeHeader from "../components/HomeHeader";
 
 export default function Home() {
   return (
@@ -22,7 +21,6 @@ export default function Home() {
             id=""
             className="form-select text-tourPurple border-tourPurple rounded border-2 px-4 py-3 text-sm"
           >
-            <option value="NA">Select...</option>
             <option value="Thailand">Thailand</option>
             <option value="Thailand">Malaysia</option>
           </select>
@@ -39,14 +37,15 @@ export default function Home() {
           </select>
         </div>
       </div>
+      
       <div className="flex items-center justify-center px-2 py-4">
         <span className="relative inline-flex">
           <Link
             href="/details"
-            className="inline-flex cursor-pointer items-center rounded-md bg-lightPurple md:px-32 px-10 py-2 text-sm font-semibold leading-6 text-white shadow"
+            className="inline-flex cursor-pointer items-center rounded-md bg-lightPurple md:px-32 px-12 py-2 text-sm font-semibold leading-6 text-white shadow"
             disabled=""
           >
-            Start Your Adventure
+            Get Started!
           </Link>
           <span className="absolute right-0 top-0 -mr-1 -mt-1 flex h-3 w-3">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blueSky opacity-75"></span>

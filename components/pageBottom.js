@@ -7,7 +7,7 @@ const PageBottom = ({title, linkurl}) => {
       <div className="flex items-center justify-end">
         <Link 
         href={linkurl}
-        className="inline-flex cursor-pointer items-center rounded-md bg-purple-950 px-12 py-2 text-sm font-semibold leading-6 text-white shadow">{title}</Link>
+        className="inline-flex cursor-pointer items-center rounded-md bg-purple-950 px-12 py-2 text-sm font-semibold leading-6 text-white shadow-lg shadow-purple-300">{title}</Link>
       </div>
     </div>
   )
