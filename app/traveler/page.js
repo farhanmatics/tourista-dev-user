@@ -7,6 +7,7 @@ import { useAppContext } from "../../contexts/AppContext";
 
 const Traveler = () => {
   const { travelerInfo } = useAppContext();
+  // console.log(travelerInfo);
 
   return (
     <>
@@ -16,7 +17,7 @@ const Traveler = () => {
           <div className="flex flex-col bg-gray-200 rounded-lg px-10 py-3">
             <p className="py-3 font-semibold capitalize text-tourPurple">
               Traveler Info:{" "}
-              {travelerInfo.travelers.length > 0 ? (
+              {travelerInfo && travelerInfo.travelers.length > 0 ? (
                 <span className="uppercase font-bold">
                   {travelerInfo.travelers.length} traveler(s) added
                 </span>
