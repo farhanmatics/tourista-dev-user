@@ -25,8 +25,17 @@
   text-align: left !important;
 } */
 
-/* select {
-  -webkit-appearance: none !important;
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-} */
+.payment-button {
+  background-color: transparent;
+  color: #3b0764;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 2px;
+  outline: none;
+}
+
+.payment-button:focus {
+  border: 1px solid #3b0764;
+  border-radius: 4px;
+  box-shadow: 0 0 0 2px rgba(59, 7, 100, 0.5);
+}
