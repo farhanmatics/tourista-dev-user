@@ -306,7 +306,7 @@ const Payment = () => {
             <p className="py-1 font-semibold capitalize text-tourPurple">
               Choose delivery method
             </p>
-            <div className="max-w-sm rounded-xl border bg-white border-purple-400 mt-1">
+            <div className="max-w-sm rounded-xl border bg-white border-purple-800 mt-1">
               <div className="flex items-center px-2 pt-2">
                 <input
                   type="radio"
@@ -327,13 +327,13 @@ const Payment = () => {
                 </label>
               </div>
 
-              <div className="flex items-center justify-end text-purple-800 font-bold pt-1 mr-2">
+              <div className="flex items-center justify-end text-purple-800 font-bold pt-1 mr-2 text-sm pb-2">
                 300.00 BDT
               </div>
             </div>
-            <div className="max-w-sm rounded-xl border bg-white border-purple-400 mt-2">
-              <div className="bg-yellow-300 rounded-t-xl py-1 px-2">
-                <span className="font-semibold text-sm">
+            <div className="max-w-sm rounded-xl border bg-white border-purple-400 mt-2 pb-2">
+              <div className="bg-purple-400 rounded-t-lg py-1 px-2">
+                <span className="font-semibold text-sm text-white">
                   Loyalty & Discounts
                 </span>
               </div>
@@ -357,8 +357,8 @@ const Payment = () => {
                 </label>
               </div>
             </div>
-            <div className="max-w-sm rounded-xl border bg-white border-purple-400 mt-2">
-              <div className=" bg-darkSky rounded-t-xl py-1 px-2">
+            <div className="max-w-sm rounded-xl border bg-white border-darkSky mt-2 pb-2">
+              <div className=" bg-darkSky rounded-t-lg py-1 px-2">
                 <span className="font-semibold text-sm text-white">
                   Fee Summery
                 </span>
@@ -386,8 +386,8 @@ const Payment = () => {
               </div>
             </div>
             <div className="max-w-sm rounded-xl border bg-white border-purple-400 mt-4 mb-2">
-              <div className=" bg-yellow-300 rounded-t-xl py-1 px-2">
-                <span className="font-semibold text-sm">Payment Options</span>
+              <div className=" bg-purple-400 rounded-t-lg py-1 px-2">
+                <span className="font-semibold text-sm text-white">Payment Options</span>
               </div>
 
               <div className="py-2 px-1 flex gap-2">
