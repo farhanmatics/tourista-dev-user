@@ -300,7 +300,7 @@ const Payment = () => {
         </div>
       )}
       <PageHeader backlink="/upload" />
-      <div className="pt-24 px-2 md:mb-24">
+      <div className="pt-24 px-2 mb-24">
         <div className="flex items-center justify-center">
           <div className="flex flex-col border bg-gray-200 rounded-lg px-8 py-3">
             <p className="py-1 font-semibold capitalize text-tourPurple">
@@ -340,19 +340,19 @@ const Payment = () => {
               <div className="flex items-center px-2 pt-1">
                 <input
                   type="radio"
-                  id="huey"
-                  name="v2"
-                  value="huey"
+                  id="huey1"
+                  name="v4"
+                  value="huey1"
                   className="form-input"
                 />
-                <label htmlFor="huey" className="text-sm font-semibold pl-1">
+                <label htmlFor="huey1" className="text-sm font-semibold pl-1">
                   I want to earn Loyalty points
                 </label>
               </div>
 
               <div className="flex items-center px-2 pb-2">
-                <input type="radio" id="dewey" name="v2" value="dewey" />
-                <label htmlFor="dewey" className="text-sm font-semibold pl-1">
+                <input type="radio" id="dewey1" name="v4" value="dewey1" />
+                <label htmlFor="dewey1" className="text-sm font-semibold pl-1">
                   I want to redeem loyalty points
                 </label>
               </div>
@@ -387,7 +387,9 @@ const Payment = () => {
             </div>
             <div className="max-w-sm rounded-xl border bg-white border-purple-400 mt-4 mb-2">
               <div className=" bg-purple-400 rounded-t-lg py-1 px-2">
-                <span className="font-semibold text-sm text-white">Payment Options</span>
+                <span className="font-semibold text-sm text-white">
+                  Payment Options
+                </span>
               </div>
 
               <div className="py-2 px-1 flex gap-2">
@@ -472,7 +474,13 @@ const Payment = () => {
                 </button>
               </div>
               <div className="flex items-center px-2 pb-2">
-                <input type="radio" id="dewey" name="v2" value="dewey" checked/>
+                <input
+                  type="radio"
+                  id="dewey"
+                  name="v2"
+                  value="dewey"
+                  checked="checked"
+                />
                 <label htmlFor="dewey" className="text-sm font-semibold pl-1">
                   Pay manually
                 </label>
