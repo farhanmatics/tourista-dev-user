@@ -385,7 +385,7 @@ const Payment = () => {
                 </div>
               </div>
             </div>
-            <div className="max-w-sm rounded-xl border bg-white border-purple-400 mt-4">
+            <div className="max-w-sm rounded-xl border bg-white border-purple-400 mt-4 mb-2">
               <div className=" bg-yellow-300 rounded-t-xl py-1 px-2">
                 <span className="font-semibold text-sm">Payment Options</span>
               </div>
@@ -470,6 +470,12 @@ const Payment = () => {
                     />
                   </svg>
                 </button>
+              </div>
+              <div className="flex items-center px-2 pb-2">
+                <input type="radio" id="dewey" name="v2" value="dewey" checked/>
+                <label htmlFor="dewey" className="text-sm font-semibold pl-1">
+                  Pay manually
+                </label>
               </div>
             </div>
           </div>
