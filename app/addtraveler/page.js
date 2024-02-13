@@ -200,6 +200,25 @@ const Add = () => {
                 className="form-input px-2 py-2 border-2 border-lightPurple w-full rounded-md"
               />
             </div>
+
+            <div className="flex justify-center px-4 pt-4 my-1">
+              <label
+                htmlFor="icon-button-file2"
+                className="bg-tourPurple text-white px-4 py-3 rounded-md uppercase font-semibold text-sm cursor-pointer"
+              >
+                Passport Scan
+                <input
+                  accept="image/*"
+                  id="icon-button-file2"
+                  type="file"
+                  //capture="environment"
+                  onChange={handleMindeeImageCapture}
+                  className="hidden"
+                  disabled={loader}
+                />
+              </label>
+            </div>
+          
           </div>
           {/* This button will scan using passporteye api*/}
           {/* <div className="px-4 pt-4">
@@ -223,23 +242,7 @@ const Add = () => {
           {
             loader && <LoaderComponent />
           }
-          <div className="px-4 pt-4 my-4">
-            <label
-              htmlFor="icon-button-file2"
-              className="bg-tourPurple text-white px-4 py-3 rounded-md uppercase font-semibold text-sm"
-            >
-              use Simple Passport Scan
-              <input
-                accept="image/*"
-                id="icon-button-file2"
-                type="file"
-                capture="environment"
-                onChange={handleMindeeImageCapture}
-                className="hidden"
-                disabled={loader}
-              />
-            </label>
-          </div>
+
 
           {imagePreview && (
             <div className="my-4 pb-6">
