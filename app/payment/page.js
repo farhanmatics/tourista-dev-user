@@ -300,7 +300,7 @@ const Payment = () => {
         </div>
       )}
       <PageHeader backlink="/upload" />
-      <div className="pt-24 px-2 mb-24">
+      <div className="pt-24 px-2 md:mb-24">
         <div className="flex items-center justify-center">
           <div className="flex flex-col border bg-gray-200 rounded-lg px-8 py-3">
             <p className="py-1 font-semibold capitalize text-tourPurple">
