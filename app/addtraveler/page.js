@@ -128,7 +128,7 @@ const Add = () => {
 
   const handleAddTraveler = () => {
     // Add the current traveler's details to the context state
-    if(mrzDetails && mrzDetails.names) {
+    if (mrzDetails && mrzDetails.names) {
       setTravelerInfo((prevInfo) => ({
         ...prevInfo,
         travelers: [...prevInfo.travelers, mrzDetails],
@@ -163,11 +163,11 @@ const Add = () => {
             <div className="mt-2">
               <label htmlFor="SurName" className="text-lightPurple">
                 {" "}
-                SurName
+                Surname
               </label>
               <input
                 type="text"
-                name="SurName"
+                name="Surname"
                 id="surname"
                 value={mrzDetails?.surname}
                 onChange={handleSurnameChange}
@@ -197,7 +197,7 @@ const Add = () => {
                 id="validitydate"
                 value={mrzDetails?.expiration_date}
                 onChange={handleValidityChange}
-                className="form-input px-2 py-2 border-2 border-lightPurple w-full rounded-md"
+                className=" px-2 py-2 border-2 border-lightPurple w-full rounded-md"
               />
             </div>
 
@@ -218,7 +218,6 @@ const Add = () => {
                 />
               </label>
             </div>
-          
           </div>
           {/* This button will scan using passporteye api*/}
           {/* <div className="px-4 pt-4">
@@ -239,10 +238,7 @@ const Add = () => {
           </div> */}
           {/*This button will scan using mindee api */}
           {/* Loader */}
-          {
-            loader && <LoaderComponent />
-          }
-
+          {loader && <LoaderComponent />}
 
           {imagePreview && (
             <div className="my-4 pb-6">
@@ -263,7 +259,9 @@ const Add = () => {
           <button
             onClick={handleAddTraveler}
             disabled={loader}
-            className={`inline-flex cursor-pointer items-center rounded-md bg-purple-950 ${loader? "opacity-30": "opacity-100"} px-12 py-2 text-sm font-semibold leading-6 text-white shadow`}
+            className={`inline-flex cursor-pointer items-center rounded-md bg-purple-950 ${
+              loader ? "opacity-30" : "opacity-100"
+            } px-12 py-2 text-sm font-semibold leading-6 text-white shadow`}
           >
             Add Traveler
           </button>
