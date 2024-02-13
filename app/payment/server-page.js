@@ -21,7 +21,7 @@ const handleConfirm = async (travelerInfo) => {
         first_name: traveler.names,
         surname: traveler.surname,
         email: "traveleremail@gmail.com",
-        phone: "012222222",
+        phone: "01713124232",
         passport_no: traveler.number,
         validity: traveler.expiration_date,
         profession_id: 22,
