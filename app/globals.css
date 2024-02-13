@@ -20,3 +20,13 @@
 .cl-formButtonPrimary:active {
   background-color: #49247a;
 }
+
+/* input::-webkit-date-and-time-value {
+  text-align: left !important;
+} */
+
+/* select {
+  -webkit-appearance: none !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+} */
