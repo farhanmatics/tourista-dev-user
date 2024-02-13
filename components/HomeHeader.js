@@ -3,12 +3,8 @@ import { SignedIn, UserButton } from "@clerk/nextjs";
 
 const HomeHeader = () => {
   return (
-    <div className="relative">
-      <img
-        className="h-48 w-full object-fill shadow-xl"
-        src="https://images.unsplash.com/photo-1523496922380-91d5afba98a3?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      />
-
+    <div className="relative h-60 w-full bg-black bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]">
+      <div className="">
       <div className="absolute inset-x-0 top-0 flex h-16 flex-row items-center justify-between px-4">
         <div className="stroke-2 text-white">
           <svg
@@ -32,7 +28,7 @@ const HomeHeader = () => {
           <img
             src="https://tourista.co/img/tl-03.png"
             alt="tourista"
-            className="w-32 h-7 pr-4"
+            className="w-32 pr-4"
           />
           <div>
             <SignedIn>
@@ -41,6 +37,12 @@ const HomeHeader = () => {
             </SignedIn>
           </div>
         </div>
+      </div>
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">
+        <h1 className="bg-gradient-to-r from-purple-800 via-purple-400 to-indigo-400 bg-clip-text text-3xl lg:text-4xl font-bold text-transparent">
+          Visa Made Easy!
+        </h1>
+      </div>
       </div>
     </div>
   );

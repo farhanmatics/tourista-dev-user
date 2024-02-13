@@ -6,12 +6,7 @@ export default function Home() {
   return (
     <>
       <HomeHeader />
-      <div className="flex items-center justify-center px-4 pb-1 pt-4">
-        <h1 className="text-xl font-bold text-tourPurple">
-          We Value Your Time!
-        </h1>
-      </div>
-      <div className="grid grid-cols-2 gap-2">
+      <div className="grid grid-cols-2 gap-2 p-4">
         <div className="flex flex-col px-2">
           <h1 className="text-tourPurple py-2 font-semibold">
             Traveling country
@@ -26,7 +21,7 @@ export default function Home() {
           </select>
         </div>
         <div className="flex flex-col px-2">
-          <h1 className="text-tourPurple py-2 font-semibold">Traveling From</h1>
+          <h1 className="text-tourPurple py-2 font-semibold">From</h1>
           <select
             name=""
             id=""
