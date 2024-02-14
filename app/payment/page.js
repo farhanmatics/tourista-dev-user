@@ -360,7 +360,7 @@ const Payment = () => {
             <div className="max-w-sm rounded-xl border bg-white border-darkSky mt-2 pb-2">
               <div className=" bg-darkSky rounded-t-lg py-1 px-2">
                 <span className="font-semibold text-sm text-white">
-                  Fee Summery
+                  Fee Summary
                 </span>
               </div>
               <div className="flex flex-col pt-2 px-1">
